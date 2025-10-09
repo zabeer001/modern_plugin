@@ -1,0 +1,303 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f7fa;
+  display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 220px;
+  background-color: #2c3e50; /* Darker blue-gray */
+  color: white;
+  padding: 20px 0;
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .logo {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.sidebar .logo img {
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+  color: #c0c0c0; /* Lighter gray for links */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li.active a {
+  background-color: #34495e; /* Slightly lighter dark blue-gray on hover/active */
+  color: white;
+  border-left: 4px solid #3498db; /* Blue accent for active */
+}
+
+.sidebar nav ul li a i {
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+.sidebar .logout {
+  margin-top: auto; /* Pushes logout to the bottom */
+  text-align: center;
+}
+
+.sidebar .logout a {
+  color: #c0c0c0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  border-top: 1px solid #34495e;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .logout a:hover {
+  background-color: #34495e;
+  color: white;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header .search-bar input {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 14px;
+}
+
+.header .user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.header .user-profile span {
+  margin-right: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.header .user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3498db;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  margin-bottom: 20px;
+  color: #777;
+  font-size: 14px;
+}
+
+.breadcrumbs a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.breadcrumbs span {
+  margin: 0 5px;
+}
+
+/* Sales History Section */
+.sales-history {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.sales-history h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Table Styles */
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.sales-table thead th {
+  background-color: #f8f9fa;
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 2px solid #e0e0e0;
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+}
+
+.sales-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.sales-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.sales-table tbody td {
+  padding: 12px 15px;
+  vertical-align: middle;
+  color: #444;
+  font-size: 14px;
+}
+
+.sales-table tbody td:first-child {
+  font-weight: bold;
+}
+
+.sales-table .product-info {
+  display: flex;
+  align-items: center;
+}
+
+.sales-table .product-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin-right: 10px;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+.sales-table .status-dropdown {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 13px;
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.1%20c9.3-9.3%2024.5-9.3%2033.8%200%20s9.3%2024.5%200%2033.8L160.7%20272.2%20c-9.3%209.3-24.5%209.3-33.8%200L4.7%20102.9%20c-9.3-9.3-9.3-24.5%200-33.8%20s24.5-9.3%2033.8%200L144%20191.1%20z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+  padding-right: 25px; /* Make space for the arrow */
+}
+
+/* Status specific styling */
+.status-dropdown.completed {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+}
+.status-dropdown.processing {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+.status-dropdown.shipping {
+  background-color: #fff3cd;
+  color: #856404;
+  border-color: #ffeeba;
+}
+/* Add more status styles as needed */
+
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination span {
+  margin-right: 15px;
+  color: #555;
+  font-size: 14px;
+}
+
+.pagination ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.pagination ul li {
+  margin-left: 5px;
+}
+
+.pagination ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #555;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  font-size: 14px;
+}
+
+.pagination ul li a:hover,
+.pagination ul li.active a {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.pagination ul li.disabled a {
+  background-color: #f0f0f0;
+  color: #aaa;
+  cursor: not-allowed;
+  border-color: #eee;
+}
+
+/* Font Awesome Icons (assuming you link it in your HTML) */
+.fas {
+  margin-right: 8px;
+}

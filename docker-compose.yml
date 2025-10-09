@@ -1,0 +1,39 @@
+version: "3" 
+services:
+  db:
+    image: mysql:8.4
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: MySQLRootPassword
+      MYSQL_DATABASE: MySQLDatabaseName
+      MYSQL_USER: MySQLUsername
+      MYSQL_PASSWORD: MySQLUserPassword
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:6.5.3
+    restart: always
+    ports:
+      - "98:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: MySQLUsername
+      WORDPRESS_DB_PASSWORD: MySQLUserPassword
+      WORDPRESS_DB_NAME: MySQLDatabaseName
+    volumes:
+      - "./:/var/www/html"
+    command: bash -c "apt-get update && apt-get install -y unzip curl && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer && apache2-foreground"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: MySQLUsername
+      PMA_PASSWORD: MySQLUserPassword
+
+volumes:
+  mysql: {}
