@@ -1,0 +1,1 @@
+import{u as t}from"./hooks-1.0.61-Bklk-gZu.js";import{l}from"./lib-1.0.61-DoXQcMHD.js";const a=r=>{const e=t(o=>o.tables[r].state.sortedColumns);return l.debug("tableColumnOrder",e),e};export{a as u};

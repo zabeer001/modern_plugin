@@ -1,0 +1,1 @@
+import{j as r}from"./cm-1.0.61-D9ug3d5m.js";import{r as s}from"./redux-1.0.61-CrJ4jvTM.js";import{J as o}from"./jsonview-1.0.61-Cs94mhmm.js";import"./vendor-1.0.61-CN03Eozo.js";const l=s.memo(({queryResults:e})=>r.jsx(o,{src:e,collapsed:1,displaySize:!0,displayArrayIndex:!0,editable:!1,enableClipboard:!1}));export{l as default};

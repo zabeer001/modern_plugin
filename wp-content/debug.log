@@ -1,0 +1,955 @@
+[18-Oct-2025 10:29:39 UTC] PHP Fatal error:  Cannot declare class RestApiRoutes, because the name is already in use in /var/www/html/wp-content/plugins/kibsterlp-backend/app/routes/RestApiRoutes.php on line 9
+[18-Oct-2025 10:31:10 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CONSTRAINT fk_user_details_user FOREIGN KEY (user_id) REFERENCES wp_users(ID) ON' at line 1 for query ALTER TABLE wp_user_details ADD COLUMN CONSTRAINT fk_user_details_user FOREIGN KEY (user_id) REFERENCES wp_users(ID) ON DELETE CASCADE made by activate_plugin, do_action('activate_kibsterlp-backend/kibsterlp-backend.php'), WP_Hook->do_action, WP_Hook->apply_filters, {closure}, Kibsterlp\App\Migrations\CreateTables::up, dbDelta
+[18-Oct-2025 10:33:01 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /var/www/html/wp-content/plugins/kibsterlp-backend/app/migrations/createtables.php on line 129
+[18-Oct-2025 10:33:02 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /var/www/html/wp-content/plugins/kibsterlp-backend/app/migrations/createtables.php on line 129
+[18-Oct-2025 10:33:38 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /var/www/html/wp-content/plugins/kibsterlp-backend/app/migrations/createtables.php on line 129
+[18-Oct-2025 10:33:38 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /var/www/html/wp-content/plugins/kibsterlp-backend/app/migrations/createtables.php on line 129
+[19-Oct-2025 04:43:52 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CONSTRAINT fk_orders_category FOREIGN KEY (category_id) REFERENCES wp_kib_catego' at line 1 for query ALTER TABLE wp_kib_orders ADD COLUMN CONSTRAINT fk_orders_category FOREIGN KEY (category_id) REFERENCES wp_kib_categories(id) ON DELETE SET NULL ON UPDATE CASCADE made by activate_plugin, do_action('activate_pickymybeautydea-backend/kibsterlp-backend.php'), WP_Hook->do_action, WP_Hook->apply_filters, {closure}, Kibsterlp\App\Migrations\CreateTables::up, dbDelta
+[19-Oct-2025 05:10:09 UTC] WordPress database error Unknown column 'category-id' in 'field list' for query INSERT INTO `wp_kib_orders` (`user_id`, `vendor_id`, `price`, `shipping_id`, `budget`, `order_title`, `order_unique_id`, `sharing_status`, `category-id`, `created_at`, `updated_at`) VALUES (NULL, 6, 150.750000, 3, 200.000000, 'Premium Keyboard Order', '014f415c-10a4-4e09-b5bb-a19ccc0ad914', 'pending', 1, '2025-10-19 05:10:09', '2025-10-19 05:10:09') made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->create
+[19-Oct-2025 05:10:44 UTC] WordPress database error Unknown column 'category-id' in 'field list' for query INSERT INTO `wp_kib_orders` (`user_id`, `vendor_id`, `price`, `shipping_id`, `budget`, `order_title`, `order_unique_id`, `sharing_status`, `category-id`, `created_at`, `updated_at`) VALUES (NULL, 6, 150.750000, 4, 200.000000, 'Premium Keyboard Order', '2932171f-787d-4785-a5e9-440d2e3c3a84', 'pending', 1, '2025-10-19 05:10:44', '2025-10-19 05:10:44') made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->create
+[19-Oct-2025 05:13:57 UTC] WordPress database error Unknown column 'category-id' in 'field list' for query INSERT INTO `wp_kib_orders` (`user_id`, `vendor_id`, `price`, `shipping_id`, `budget`, `order_title`, `order_unique_id`, `sharing_status`, `category-id`, `created_at`, `updated_at`) VALUES (NULL, 6, 150.750000, 5, 200.000000, 'Premium Keyboard Order', 'f51c9c7c-aa81-451f-b796-60661d9dac51', 'pending', 1, '2025-10-19 05:13:57', '2025-10-19 05:13:57') made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->create
+[19-Oct-2025 05:19:57 UTC] PHP Parse error:  syntax error, unexpected token ":" in /var/www/html/wp-content/plugins/pickymybeautydea-backend/app/controllers/OrderController.php on line 303
+[21-Oct-2025 10:13:02 UTC] PHP Fatal error:  Uncaught Error: Class "UserController" not found in /var/www/html/wp-content/plugins/pickymybeautydea-backend/app/routes/RestApiRoutes.php:19
+Stack trace:
+#0 /var/www/html/wp-content/plugins/pickymybeautydea-backend/app/routes/RestApiRoutes.php(554): RestApiRoutes->__construct()
+#1 /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php(25): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-settings.php(545): include_once('/var/www/html/w...')
+#3 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#4 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/app/routes/RestApiRoutes.php on line 19
+[21-Oct-2025 10:14:13 UTC] PHP Warning:  Undefined property: RestApiRoutes::$UserController in /var/www/html/wp-content/plugins/pickymybeautydea-backend/app/routes/RestApiRoutes.php on line 525
+[21-Oct-2025 10:20:05 UTC] PHP Warning:  Undefined property: stdClass::$roles in /var/www/html/wp-content/plugins/pickymybeautydea-backend/app/controllers/UserController.php on line 28
+[23-Oct-2025 06:35:13 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:13 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:13 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:13 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:13 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:14 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:14 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:39 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:52 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:52 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:52 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:52 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:52 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:56 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:58 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:58 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:58 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:58 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:58 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:35:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:02 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin.php(35): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:03 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#4 /var/www/html/index.php(17): require('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:04 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin.php(35): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:04 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#4 /var/www/html/index.php(17): require('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:05 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin.php(35): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:05 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#4 /var/www/html/index.php(17): require('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:05 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin.php(35): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:05 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 06:36:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea/app/react/React.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php:19
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#4 /var/www/html/index.php(17): require('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea/pickymybeautyde.php on line 19
+[23-Oct-2025 10:10:45 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT COUNT(*)
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%asdaasd%' OR o.customer_name LIKE '%asdaasd%')
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:10:45 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT o.*, s.zip_code, s.email, s.phone
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%asdaasd%' OR o.customer_name LIKE '%asdaasd%')
+        ORDER BY o.id DESC
+        LIMIT 10 OFFSET 10
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:10:51 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT COUNT(*)
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%a%' OR o.customer_name LIKE '%a%')
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:10:51 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT o.*, s.zip_code, s.email, s.phone
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%a%' OR o.customer_name LIKE '%a%')
+        ORDER BY o.id DESC
+        LIMIT 10 OFFSET 10
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:10:56 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT COUNT(*)
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%as%' OR o.customer_name LIKE '%as%')
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:10:56 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT o.*, s.zip_code, s.email, s.phone
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%as%' OR o.customer_name LIKE '%as%')
+        ORDER BY o.id DESC
+        LIMIT 10 OFFSET 10
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:11:01 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT COUNT(*)
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%asd%' OR o.customer_name LIKE '%asd%')
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:11:01 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT o.*, s.zip_code, s.email, s.phone
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%asd%' OR o.customer_name LIKE '%asd%')
+        ORDER BY o.id DESC
+        LIMIT 10 OFFSET 10
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:11:04 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT COUNT(*)
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%as%' OR o.customer_name LIKE '%as%')
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:11:04 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT o.*, s.zip_code, s.email, s.phone
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%as%' OR o.customer_name LIKE '%as%')
+        ORDER BY o.id DESC
+        LIMIT 10 OFFSET 10
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:12:05 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT COUNT(*)
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%a%' OR o.customer_name LIKE '%a%')
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:12:05 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT o.*, s.zip_code, s.email, s.phone
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%a%' OR o.customer_name LIKE '%a%')
+        ORDER BY o.id DESC
+        LIMIT 10 OFFSET 0
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:12:17 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT COUNT(*)
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%as%' OR o.customer_name LIKE '%as%')
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:12:17 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT o.*, s.zip_code, s.email, s.phone
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%as%' OR o.customer_name LIKE '%as%')
+        ORDER BY o.id DESC
+        LIMIT 10 OFFSET 0
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:12:20 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT COUNT(*)
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%ass%' OR o.customer_name LIKE '%ass%')
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:12:20 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT o.*, s.zip_code, s.email, s.phone
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%ass%' OR o.customer_name LIKE '%ass%')
+        ORDER BY o.id DESC
+        LIMIT 10 OFFSET 0
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:12:21 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT COUNT(*)
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%asss%' OR o.customer_name LIKE '%asss%')
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:12:21 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT o.*, s.zip_code, s.email, s.phone
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%asss%' OR o.customer_name LIKE '%asss%')
+        ORDER BY o.id DESC
+        LIMIT 10 OFFSET 0
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:12:22 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT COUNT(*)
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%assss%' OR o.customer_name LIKE '%assss%')
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:12:22 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT o.*, s.zip_code, s.email, s.phone
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%assss%' OR o.customer_name LIKE '%assss%')
+        ORDER BY o.id DESC
+        LIMIT 10 OFFSET 0
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:13:30 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT COUNT(*)
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%bid%' OR o.customer_name LIKE '%bid%')
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:13:30 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT o.*, s.zip_code, s.email, s.phone
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (o.order_unique_id LIKE '%bid%' OR o.customer_name LIKE '%bid%')
+        ORDER BY o.id DESC
+        LIMIT 10 OFFSET 0
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:13:57 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT COUNT(*)
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (
+        o.order_unique_id LIKE '%bid%'
+        OR o.customer_name LIKE '%bid%'
+        OR s.email LIKE '%bid%'
+        OR s.phone LIKE '%bid%'
+    )
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[23-Oct-2025 10:13:57 UTC] WordPress database error Unknown column 'o.customer_name' in 'where clause' for query 
+        SELECT o.*, s.zip_code, s.email, s.phone
+        FROM wp_kib_orders AS o
+        LEFT JOIN wp_kib_shipping_addresses AS s ON o.shipping_id = s.id
+        WHERE (
+        o.order_unique_id LIKE '%bid%'
+        OR o.customer_name LIKE '%bid%'
+        OR s.email LIKE '%bid%'
+        OR s.phone LIKE '%bid%'
+    )
+        ORDER BY o.id DESC
+        LIMIT 10 OFFSET 0
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->index
+[24-Oct-2025 04:05:27 UTC] WordPress database error Unknown column 'o.order_uniq_id' in 'where clause' for query 
+        SELECT
+            o.*,
+            s.id         AS s_id,
+            s.email      AS s_email,
+            s.phone      AS s_phone,
+            s.name       AS s_name,
+            s.country    AS s_country,
+            s.city       AS s_city,
+            s.district   AS s_district,
+            s.zip_code   AS s_zip_code,
+            s.created_at AS s_created_at,
+            s.updated_at AS s_updated_at
+        FROM wp_kib_orders o
+        LEFT JOIN wp_kib_shipping_addresses s ON s.id = o.shipping_id
+        WHERE o.order_uniq_id = ''
+        LIMIT 1
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->show
+[24-Oct-2025 04:07:22 UTC] WordPress database error Unknown column 'o.order_uniq_id' in 'where clause' for query 
+        SELECT
+            o.*,
+            s.id         AS s_id,
+            s.email      AS s_email,
+            s.phone      AS s_phone,
+            s.name       AS s_name,
+            s.country    AS s_country,
+            s.city       AS s_city,
+            s.district   AS s_district,
+            s.zip_code   AS s_zip_code,
+            s.created_at AS s_created_at,
+            s.updated_at AS s_updated_at
+        FROM wp_kib_orders o
+        LEFT JOIN wp_kib_shipping_addresses s ON s.id = o.shipping_id
+        WHERE o.order_uniq_id = 'a4b6812a-e492-422f-8368-9f3a01f22b52'
+        LIMIT 1
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->show
+[24-Oct-2025 04:07:52 UTC] WordPress database error Unknown column 'o.order_uniq_id' in 'where clause' for query 
+        SELECT
+            o.*,
+            s.id         AS s_id,
+            s.email      AS s_email,
+            s.phone      AS s_phone,
+            s.name       AS s_name,
+            s.country    AS s_country,
+            s.city       AS s_city,
+            s.district   AS s_district,
+            s.zip_code   AS s_zip_code,
+            s.created_at AS s_created_at,
+            s.updated_at AS s_updated_at
+        FROM wp_kib_orders o
+        LEFT JOIN wp_kib_shipping_addresses s ON s.id = o.shipping_id
+        WHERE o.order_uniq_id = 'a4b6812a-e492-422f-8368-9f3a01f22b52'
+        LIMIT 1
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->show
+[24-Oct-2025 04:09:25 UTC] WordPress database error Unknown column 'o.order_uniq_id' in 'where clause' for query 
+        SELECT
+            o.*,
+            s.id         AS s_id,
+            s.email      AS s_email,
+            s.phone      AS s_phone,
+            s.name       AS s_name,
+            s.country    AS s_country,
+            s.city       AS s_city,
+            s.district   AS s_district,
+            s.zip_code   AS s_zip_code,
+            s.created_at AS s_created_at,
+            s.updated_at AS s_updated_at
+        FROM wp_kib_orders o
+        LEFT JOIN wp_kib_shipping_addresses s ON s.id = o.shipping_id
+        WHERE o.order_uniq_id = 'a4b6812a-e492-422f-8368-9f3a01f22b52'
+        LIMIT 1
+     made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->show
+[24-Oct-2025 05:21:21 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM wp_kib_orders o
+    LEFT JOIN wp_kib_shipping_addresses s ON s.id = o.ship' at line 16 for query 
+    SELECT
+        o.*,
+        s.id         AS s_id,
+        s.email      AS s_email,
+        s.phone      AS s_phone,
+        s.name       AS s_name,
+        s.country    AS s_country,
+        s.city       AS s_city,
+        s.district   AS s_district,
+        s.zip_code   AS s_zip_code,
+        s.created_at AS s_created_at,
+        s.updated_at AS s_updated_at,
+        c.id         AS c_id,
+        c.title AS c_title,
+      
+    FROM wp_kib_orders o
+    LEFT JOIN wp_kib_shipping_addresses s ON s.id = o.shipping_id
+    LEFT JOIN wp_wp_kib_categories c ON c.id = o.category_id
+    WHERE o.order_unique_id = 'a4b6812a-e492-422f-8368-9f3a01f22b52'
+    LIMIT 1
+ made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->show
+[24-Oct-2025 08:44:17 UTC] PHP Parse error:  syntax error, unexpected variable "$uniq_id" in /var/www/html/wp-content/plugins/pickymybeautydea-backend/app/controllers/OrderController.php on line 293
+[24-Oct-2025 09:13:13 UTC] PHP Warning:  Undefined property: stdClass::$roles in /var/www/html/wp-content/plugins/pickymybeautydea-backend/app/controllers/UserController.php on line 74
+[25-Oct-2025 06:14:39 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/pickymybeautydea-backend/app/user/ProfileFields.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[25-Oct-2025 06:14:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/pickymybeautydea-backend/app/user/ProfileFields.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php:27
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[25-Oct-2025 06:53:41 UTC] PHP Parse error:  syntax error, unexpected token "=>" in /var/www/html/wp-content/plugins/pickymybeautydea-backend/app/routes/RestApiRoutes.php on line 145
+[25-Oct-2025 06:55:02 UTC] PHP Parse error:  syntax error, unexpected token "}" in /var/www/html/wp-content/plugins/pickymybeautydea-backend/app/controllers/OrderController.php on line 553
+[25-Oct-2025 06:55:42 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting ";" or "{" in /var/www/html/wp-content/plugins/pickymybeautydea-backend/app/controllers/OrderController.php on line 553
+[25-Oct-2025 08:39:17 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php:930
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-request.php(930): is_numeric('13', Object(WP_REST_Request), 'id')
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1114): WP_REST_Request->has_valid_params()
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(459): WP_REST_Server->serve_request('/kibsterlp-admi...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php on line 930
+[27-Oct-2025 10:39:12 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class React_Frontend does not have a method "register_api_routes" in /var/www/html/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /var/www/html/wp-includes/rest-api.php(628): do_action('rest_api_init', Object(WP_REST_Server))
+#3 /var/www/html/wp-includes/rest-api.php(452): rest_get_server()
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/class-wp-hook.php on line 324
+[27-Oct-2025 10:39:30 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class React_Frontend does not have a method "register_api_routes" in /var/www/html/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /var/www/html/wp-includes/rest-api.php(628): do_action('rest_api_init', Object(WP_REST_Server))
+#3 /var/www/html/wp-includes/rest-api.php(452): rest_get_server()
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/class-wp-hook.php on line 324
+[27-Oct-2025 11:07:52 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class React_Frontend does not have a method "register_api_routes" in /var/www/html/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /var/www/html/wp-includes/rest-api.php(628): do_action('rest_api_init', Object(WP_REST_Server))
+#3 /var/www/html/wp-includes/rest-api.php(452): rest_get_server()
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/class-wp-hook.php on line 324
+[27-Oct-2025 11:08:00 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class React_Frontend does not have a method "register_api_routes" in /var/www/html/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /var/www/html/wp-includes/rest-api.php(628): do_action('rest_api_init', Object(WP_REST_Server))
+#3 /var/www/html/wp-includes/rest-api.php(452): rest_get_server()
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/class-wp-hook.php on line 324
+[27-Oct-2025 11:08:14 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class React_Frontend does not have a method "register_api_routes" in /var/www/html/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /var/www/html/wp-includes/rest-api.php(628): do_action('rest_api_init', Object(WP_REST_Server))
+#3 /var/www/html/wp-includes/rest-api.php(452): rest_get_server()
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/class-wp-hook.php on line 324
+[27-Oct-2025 11:08:14 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class React_Frontend does not have a method "register_api_routes" in /var/www/html/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /var/www/html/wp-includes/rest-api.php(628): do_action('rest_api_init', Object(WP_REST_Server))
+#3 /var/www/html/wp-includes/rest-api.php(452): rest_get_server()
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/class-wp-hook.php on line 324
+[27-Oct-2025 11:08:55 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class React_Frontend does not have a method "register_api_routes" in /var/www/html/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /var/www/html/wp-includes/rest-api.php(628): do_action('rest_api_init', Object(WP_REST_Server))
+#3 /var/www/html/wp-includes/rest-api.php(452): rest_get_server()
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/class-wp-hook.php on line 324
+[27-Oct-2025 13:00:26 UTC] WordPress database error Cannot add or update a child row: a foreign key constraint fails (`MySQLDatabaseName`.`wp_kib_orders`, CONSTRAINT `fk_orders_category` FOREIGN KEY (`category_id`) REFERENCES `wp_kib_categories` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) for query INSERT INTO `wp_kib_orders` (`user_id`, `vendor_id`, `price`, `shipping_id`, `budget`, `order_title`, `order_unique_id`, `sharing_status`, `category_id`, `created_at`, `updated_at`) VALUES (NULL, NULL, 0.000000, 1, 200.000000, NULL, '6fcb5202-877f-4ab8-a507-0e3ef0ed0e31', 'pending', 3, '2025-10-27 13:00:26', '2025-10-27 13:00:26') made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->create
+[27-Oct-2025 13:02:36 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CONSTRAINT fk_orders_category FOREIGN KEY (category_id) REFERENCES wp_kib_catego' at line 1 for query ALTER TABLE wp_kib_orders ADD COLUMN CONSTRAINT fk_orders_category FOREIGN KEY (category_id) REFERENCES wp_kib_categories(id) ON DELETE SET NULL ON UPDATE CASCADE made by activate_plugin, do_action('activate_pickymybeautydea-backend/kibsterlp-backend.php'), WP_Hook->do_action, WP_Hook->apply_filters, {closure}, Kibsterlp\App\Migrations\CreateTables::up, dbDelta
+[27-Oct-2025 14:36:32 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php:930
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-request.php(930): is_numeric('2', Object(WP_REST_Request), 'id')
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1114): WP_REST_Request->has_valid_params()
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(459): WP_REST_Server->serve_request('/kibsterlp-admi...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php on line 930
+[27-Oct-2025 14:36:32 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php:930
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-request.php(930): is_numeric('2', Object(WP_REST_Request), 'id')
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1114): WP_REST_Request->has_valid_params()
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(459): WP_REST_Server->serve_request('/kibsterlp-admi...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php on line 930
+[27-Oct-2025 14:37:37 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php:930
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-request.php(930): is_numeric('1', Object(WP_REST_Request), 'id')
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1114): WP_REST_Request->has_valid_params()
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(459): WP_REST_Server->serve_request('/kibsterlp-admi...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php on line 930
+[27-Oct-2025 14:39:17 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php:930
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-request.php(930): is_numeric('12', Object(WP_REST_Request), 'id')
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1114): WP_REST_Request->has_valid_params()
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(459): WP_REST_Server->serve_request('/kibsterlp-admi...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php on line 930
+[27-Oct-2025 14:39:59 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php:930
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-request.php(930): is_numeric('12', Object(WP_REST_Request), 'id')
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1114): WP_REST_Request->has_valid_params()
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(459): WP_REST_Server->serve_request('/kibsterlp-admi...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php on line 930
+[27-Oct-2025 14:40:03 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php:930
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-request.php(930): is_numeric('1', Object(WP_REST_Request), 'id')
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1114): WP_REST_Request->has_valid_params()
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(459): WP_REST_Server->serve_request('/kibsterlp-admi...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php on line 930
+[27-Oct-2025 14:40:33 UTC] PHP Parse error:  syntax error, unexpected integer "0" in /var/www/html/wp-content/plugins/pickymybeautydea-backend/app/controllers/CategoryController.php on line 80
+[27-Oct-2025 14:40:41 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php:930
+Stack trace:
+#0 /var/www/html/wp-includes/rest-api/class-wp-rest-request.php(930): is_numeric('1', Object(WP_REST_Request), 'id')
+#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1114): WP_REST_Request->has_valid_params()
+#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wp-includes/rest-api.php(459): WP_REST_Server->serve_request('/kibsterlp-admi...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#5 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 /var/www/html/wp-includes/class-wp.php(818): WP->parse_request('')
+#9 /var/www/html/wp-includes/functions.php(1342): WP->main('')
+#10 /var/www/html/wp-blog-header.php(16): wp()
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-includes/rest-api/class-wp-rest-request.php on line 930
+[28-Oct-2025 06:29:59 UTC] PHP Deprecated:  Function get_page_by_title is <strong>deprecated</strong> since version 6.2.0! Use WP_Query instead. in /var/www/html/wp-includes/functions.php on line 6121
+[28-Oct-2025 09:13:55 UTC] PHP Warning:  Constant KIBSTERLP_API_KEY already defined in /var/www/html/wp-content/plugins/kibsterlp-backend/kibsterlp-backend.php on line 16
+[28-Oct-2025 09:13:55 UTC] PHP Warning:  Constant KIBSTERLP_ADMIN_PLUGIN already defined in /var/www/html/wp-content/plugins/kibsterlp-backend/kibsterlp-backend.php on line 18
+[28-Oct-2025 09:13:55 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CONSTRAINT fk_orders_category FOREIGN KEY (category_id) REFERENCES wp_kib_catego' at line 1 for query ALTER TABLE wp_kib_orders ADD COLUMN CONSTRAINT fk_orders_category FOREIGN KEY (category_id) REFERENCES wp_kib_categories(id) ON DELETE SET NULL ON UPDATE CASCADE made by activate_plugin, do_action('activate_kibsterlp-backend/kibsterlp-backend.php'), WP_Hook->do_action, WP_Hook->apply_filters, {closure}, Kibsterlp\App\Migrations\CreateTables::up, dbDelta
+[28-Oct-2025 09:13:56 UTC] PHP Warning:  Constant KIBSTERLP_API_KEY already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 16
+[28-Oct-2025 09:13:56 UTC] PHP Warning:  Constant KIBSTERLP_ADMIN_PLUGIN already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 18
+[28-Oct-2025 09:13:56 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:13:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php:27
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin.php(35): require_once('/var/www/html/w...')
+#4 /var/www/html/wp-admin/plugins.php(10): require_once('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:14:23 UTC] PHP Warning:  Constant KIBSTERLP_API_KEY already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 16
+[28-Oct-2025 09:14:23 UTC] PHP Warning:  Constant KIBSTERLP_ADMIN_PLUGIN already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 18
+[28-Oct-2025 09:14:23 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:14:23 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php:27
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:14:25 UTC] PHP Warning:  Constant KIBSTERLP_API_KEY already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 16
+[28-Oct-2025 09:14:25 UTC] PHP Warning:  Constant KIBSTERLP_ADMIN_PLUGIN already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 18
+[28-Oct-2025 09:14:25 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:14:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php:27
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin.php(35): require_once('/var/www/html/w...')
+#4 /var/www/html/wp-admin/plugins.php(10): require_once('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:16:24 UTC] PHP Warning:  Constant KIBSTERLP_API_KEY already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 16
+[28-Oct-2025 09:16:24 UTC] PHP Warning:  Constant KIBSTERLP_ADMIN_PLUGIN already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 18
+[28-Oct-2025 09:16:24 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:16:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php:27
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:16:43 UTC] PHP Warning:  Constant KIBSTERLP_API_KEY already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 16
+[28-Oct-2025 09:16:43 UTC] PHP Warning:  Constant KIBSTERLP_ADMIN_PLUGIN already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 18
+[28-Oct-2025 09:16:43 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:16:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php:27
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin.php(35): require_once('/var/www/html/w...')
+#4 /var/www/html/wp-admin/plugins.php(10): require_once('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:16:43 UTC] PHP Warning:  Constant KIBSTERLP_API_KEY already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 16
+[28-Oct-2025 09:16:43 UTC] PHP Warning:  Constant KIBSTERLP_ADMIN_PLUGIN already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 18
+[28-Oct-2025 09:16:43 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:16:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php:27
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#4 /var/www/html/index.php(17): require('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:16:44 UTC] PHP Warning:  Constant KIBSTERLP_API_KEY already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 16
+[28-Oct-2025 09:16:44 UTC] PHP Warning:  Constant KIBSTERLP_ADMIN_PLUGIN already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 18
+[28-Oct-2025 09:16:44 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:16:44 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php:27
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-admin/admin.php(35): require_once('/var/www/html/w...')
+#4 /var/www/html/wp-admin/index.php(10): require_once('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:16:44 UTC] PHP Warning:  Constant KIBSTERLP_API_KEY already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 16
+[28-Oct-2025 09:16:44 UTC] PHP Warning:  Constant KIBSTERLP_ADMIN_PLUGIN already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 18
+[28-Oct-2025 09:16:44 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:16:44 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php:27
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#4 /var/www/html/index.php(17): require('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:16:46 UTC] PHP Warning:  Constant KIBSTERLP_API_KEY already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 16
+[28-Oct-2025 09:16:46 UTC] PHP Warning:  Constant KIBSTERLP_ADMIN_PLUGIN already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 18
+[28-Oct-2025 09:16:46 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:16:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php:27
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#4 /var/www/html/index.php(17): require('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:17:26 UTC] PHP Warning:  Constant KIBSTERLP_API_KEY already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 16
+[28-Oct-2025 09:17:26 UTC] PHP Warning:  Constant KIBSTERLP_ADMIN_PLUGIN already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 18
+[28-Oct-2025 09:17:26 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:17:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php:27
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#4 /var/www/html/index.php(17): require('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:17:31 UTC] PHP Warning:  Constant KIBSTERLP_API_KEY already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 16
+[28-Oct-2025 09:17:31 UTC] PHP Warning:  Constant KIBSTERLP_ADMIN_PLUGIN already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 18
+[28-Oct-2025 09:17:31 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:17:31 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php:27
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#4 /var/www/html/index.php(17): require('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:17:42 UTC] PHP Warning:  Constant KIBSTERLP_API_KEY already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 16
+[28-Oct-2025 09:17:42 UTC] PHP Warning:  Constant KIBSTERLP_ADMIN_PLUGIN already defined in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 18
+[28-Oct-2025 09:17:42 UTC] PHP Warning:  require_once(/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php): Failed to open stream: No such file or directory in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:17:42 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/wp-content/plugins/kibsterlp-backend/app/user/ProfileFields.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php:27
+Stack trace:
+#0 /var/www/html/wp-settings.php(545): include_once()
+#1 /var/www/html/wp-config.php(79): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#4 /var/www/html/index.php(17): require('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/pickymybeautydea-backend/kibsterlp-backend.php on line 27
+[28-Oct-2025 09:49:49 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CONSTRAINT fk_orders_category FOREIGN KEY (category_id) REFERENCES wp_kib_catego' at line 1 for query ALTER TABLE wp_kib_orders ADD COLUMN CONSTRAINT fk_orders_category FOREIGN KEY (category_id) REFERENCES wp_kib_categories(id) ON DELETE SET NULL ON UPDATE CASCADE made by activate_plugin, do_action('activate_pickymybeautydea-backend/kibsterlp-backend.php'), WP_Hook->do_action, WP_Hook->apply_filters, {closure}, Kibsterlp\App\Migrations\CreateTables::up, dbDelta
+[28-Oct-2025 10:32:50 UTC] WordPress database error Cannot add or update a child row: a foreign key constraint fails (`MySQLDatabaseName`.`wp_kib_orders`, CONSTRAINT `fk_orders_category` FOREIGN KEY (`category_id`) REFERENCES `wp_kib_categories` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) for query INSERT INTO `wp_kib_orders` (`user_id`, `vendor_id`, `price`, `shipping_id`, `budget`, `order_title`, `order_unique_id`, `sharing_status`, `category_id`, `created_at`, `updated_at`) VALUES (NULL, 6, 150.750000, 10, 200.000000, 'Premium Keyboard Order', 'a651d01b-5e58-4665-9d71-2a7aef14e7ae', 'pending', 0, '2025-10-28 10:32:50', '2025-10-28 10:32:50') made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->create
+[28-Oct-2025 10:33:10 UTC] WordPress database error Cannot add or update a child row: a foreign key constraint fails (`MySQLDatabaseName`.`wp_kib_orders`, CONSTRAINT `fk_orders_category` FOREIGN KEY (`category_id`) REFERENCES `wp_kib_categories` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) for query INSERT INTO `wp_kib_orders` (`user_id`, `vendor_id`, `price`, `shipping_id`, `budget`, `order_title`, `order_unique_id`, `sharing_status`, `category_id`, `created_at`, `updated_at`) VALUES (NULL, 2, 150.750000, 11, 200.000000, 'Premium Keyboard Order', '69dc93c4-1cbf-4a75-b125-4206df72655b', 'pending', 0, '2025-10-28 10:33:10', '2025-10-28 10:33:10') made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->create
+[29-Oct-2025 05:59:50 UTC] WordPress database error Cannot add or update a child row: a foreign key constraint fails (`MySQLDatabaseName`.`wp_kib_orders`, CONSTRAINT `fk_orders_category` FOREIGN KEY (`category_id`) REFERENCES `wp_kib_categories` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) for query INSERT INTO `wp_kib_orders` (`user_id`, `vendor_id`, `price`, `shipping_id`, `budget`, `order_title`, `order_unique_id`, `sharing_status`, `category_id`, `created_at`, `updated_at`) VALUES (NULL, NULL, 0.000000, 14, 300.000000, NULL, '305c2bb1-7e98-4066-a384-e844724cc63b', 'not accepted', 1, '2025-10-29 05:59:50', '2025-10-29 05:59:50') made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->create
+[29-Oct-2025 06:00:01 UTC] WordPress database error Cannot add or update a child row: a foreign key constraint fails (`MySQLDatabaseName`.`wp_kib_orders`, CONSTRAINT `fk_orders_category` FOREIGN KEY (`category_id`) REFERENCES `wp_kib_categories` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) for query INSERT INTO `wp_kib_orders` (`user_id`, `vendor_id`, `price`, `shipping_id`, `budget`, `order_title`, `order_unique_id`, `sharing_status`, `category_id`, `created_at`, `updated_at`) VALUES (NULL, NULL, 0.000000, 15, 300.000000, NULL, '9640aac3-c192-43e4-8a84-66225dfc0874', 'not accepted', 1, '2025-10-29 06:00:01', '2025-10-29 06:00:01') made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->create
+[29-Oct-2025 06:00:42 UTC] WordPress database error Cannot add or update a child row: a foreign key constraint fails (`MySQLDatabaseName`.`wp_kib_orders`, CONSTRAINT `fk_orders_category` FOREIGN KEY (`category_id`) REFERENCES `wp_kib_categories` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) for query INSERT INTO `wp_kib_orders` (`user_id`, `vendor_id`, `price`, `shipping_id`, `budget`, `order_title`, `order_unique_id`, `sharing_status`, `category_id`, `created_at`, `updated_at`) VALUES (NULL, NULL, 0.000000, 16, 300.000000, NULL, 'a52a0ba4-815d-4d6a-b6e7-da31fe298ec1', 'not accepted', 1, '2025-10-29 06:00:42', '2025-10-29 06:00:42') made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->create
+[29-Oct-2025 06:00:55 UTC] WordPress database error Cannot add or update a child row: a foreign key constraint fails (`MySQLDatabaseName`.`wp_kib_orders`, CONSTRAINT `fk_orders_category` FOREIGN KEY (`category_id`) REFERENCES `wp_kib_categories` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) for query INSERT INTO `wp_kib_orders` (`user_id`, `vendor_id`, `price`, `shipping_id`, `budget`, `order_title`, `order_unique_id`, `sharing_status`, `category_id`, `created_at`, `updated_at`) VALUES (NULL, NULL, 0.000000, 17, 300.000000, NULL, 'a34a7e89-0def-4cac-b3d4-c97d88c6c48a', 'not accepted', 7, '2025-10-29 06:00:55', '2025-10-29 06:00:55') made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->create
+[29-Oct-2025 06:01:03 UTC] WordPress database error Cannot add or update a child row: a foreign key constraint fails (`MySQLDatabaseName`.`wp_kib_orders`, CONSTRAINT `fk_orders_category` FOREIGN KEY (`category_id`) REFERENCES `wp_kib_categories` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) for query INSERT INTO `wp_kib_orders` (`user_id`, `vendor_id`, `price`, `shipping_id`, `budget`, `order_title`, `order_unique_id`, `sharing_status`, `category_id`, `created_at`, `updated_at`) VALUES (NULL, NULL, 0.000000, 18, 300.000000, NULL, 'ae4e8673-75db-4d83-9f4b-67832b9d6245', 'not accepted', 8, '2025-10-29 06:01:03', '2025-10-29 06:01:03') made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->create
+[29-Oct-2025 08:45:52 UTC] WordPress database error Table 'MySQLDatabaseName.wp_kib_shipping' doesn't exist for query DELETE FROM `wp_kib_shipping` WHERE `id` = 19 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, OrderController->update, OrderController->deleteShipping
+[29-Oct-2025 08:45:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-includes/class-wpdb.php:1851) in /var/www/html/wp-includes/rest-api/class-wp-rest-server.php on line 1896
+[29-Oct-2025 08:45:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-includes/class-wpdb.php:1851) in /var/www/html/wp-includes/rest-api/class-wp-rest-server.php on line 1920
+[05-Nov-2025 09:11:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/elementor/modules/image-loading-optimization/module.php:96) in /var/www/html/wp-includes/pluggable.php on line 1450
+[05-Nov-2025 09:11:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/elementor/modules/image-loading-optimization/module.php:96) in /var/www/html/wp-includes/pluggable.php on line 1453
+[05-Nov-2025 09:13:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/elementor/modules/image-loading-optimization/module.php:96) in /var/www/html/wp-includes/pluggable.php on line 1450
+[05-Nov-2025 09:13:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/elementor/modules/image-loading-optimization/module.php:96) in /var/www/html/wp-includes/pluggable.php on line 1453
+[05-Nov-2025 09:14:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/elementor/modules/image-loading-optimization/module.php:96) in /var/www/html/wp-includes/pluggable.php on line 1450
+[05-Nov-2025 09:14:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/elementor/modules/image-loading-optimization/module.php:96) in /var/www/html/wp-includes/pluggable.php on line 1453

@@ -1,8 +1,9 @@
-version: "3" 
+version: "3"
 services:
   db:
+    container_name: kibsterlp_db
     image: mysql:8.4
-    restart: always
+    restart: "no"
     environment:
       MYSQL_ROOT_PASSWORD: MySQLRootPassword
       MYSQL_DATABASE: MySQLDatabaseName
@@ -10,12 +11,13 @@ services:
       MYSQL_PASSWORD: MySQLUserPassword
 
   wordpress:
+    container_name: kibsterlp_wordpress
     depends_on:
       - db
     image: wordpress:6.5.3
-    restart: always
+    restart: "no"
     ports:
-      - "98:80"
+      - "8585:80"
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: MySQLUsername
@@ -26,8 +28,9 @@ services:
     command: bash -c "apt-get update && apt-get install -y unzip curl && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer && apache2-foreground"
 
   phpmyadmin:
+    container_name: kibsterlp_phpmyadmin
     image: phpmyadmin/phpmyadmin
-    restart: always
+    restart: "no"
     ports:
       - "8080:80"
     environment:

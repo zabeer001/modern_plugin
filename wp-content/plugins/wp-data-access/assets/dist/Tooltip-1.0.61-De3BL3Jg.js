@@ -1,0 +1,1 @@
+import{j as a}from"./cm-1.0.61-D9ug3d5m.js";const p=({children:t,title:o,position:i,disabled:s})=>s?t:a.jsx("div",{style:{display:"inline-block",width:"fit-content",zIndex:999999},className:"tooltip","data-position":i??"top","data-tool-tip":o,children:t});export{p as T};

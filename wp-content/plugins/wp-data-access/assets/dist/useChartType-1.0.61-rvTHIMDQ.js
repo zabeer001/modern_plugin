@@ -1,0 +1,1 @@
+import{u as o}from"./hooks-1.0.61-Bklk-gZu.js";import{l as p}from"./lib-1.0.61-DoXQcMHD.js";const h=e=>{const r=o(a=>{var t;return((t=a.charts[e])==null?void 0:t.chartType)??"BarChart"});return p.debug("chartType",r),r};export{h as u};

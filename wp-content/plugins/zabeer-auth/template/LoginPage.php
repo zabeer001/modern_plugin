@@ -3,88 +3,67 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <!-- Tailwind CSS CDN (only for this page) -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles scoped to this page */
-        .gradient-bg {
-            background: linear-gradient(135deg, #6B7280, #1F2937);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        .btn-gradient {
-            background: linear-gradient(to right, #3B82F6, #8B5CF6);
-            transition: background 0.3s ease;
-        }
-        .btn-gradient:hover {
-            background: linear-gradient(to right, #2563EB, #7C3AED);
-        }
-        .input-focus {
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .input-focus:focus {
-            border-color: #3B82F6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
-            outline: none;
-        }
-    </style>
+    <!-- Tailwind CSS CDN -->
+
 </head>
-<body class="gradient-bg">
-    <div class="container mx-auto px-4">
-        <div class="flex justify-center items-center">
-            <div class="card bg-white rounded-2xl shadow-lg p-8 max-w-md w-full">
-                <div class="text-center mb-6">
-                    <h3 class="text-3xl font-bold text-gray-800">Welcome Back</h3>
-                    <p class="text-gray-500 mt-2">Sign in to your account</p>
-                </div>
-                <form id="zabeer-login-form">
-                    <div class="mb-5">
-                        <input 
-                            type="text" 
-                            id="username" 
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-700 input-focus" 
-                            placeholder="Username" 
-                            required
-                        >
-                    </div>
-                    <div class="mb-6">
-                        <input 
-                            type="password" 
-                            id="password" 
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-700 input-focus" 
-                            placeholder="Password" 
-                            required
-                        >
-                    </div>
-                    <button 
-                        type="submit" 
-                        class="btn-gradient w-full py-3 rounded-lg text-white font-semibold text-lg"
-                    >
-                        Login
-                    </button>
-                </form>
-                <p class="text-center text-gray-500 mt-6">
-                    Forgot your password? <a href="#" class="text-blue-500 hover:underline">Reset it</a>
-                </p>
-            </div>
+
+<body class="!bg-gradient-to-br !from-rose-700 !to-gray-900 !min-h-screen !flex !justify-center !items-center">
+
+    <div class="!bg-white !rounded-2xl !shadow-xl !p-8 !max-w-md !w-full !transform !transition !hover:-translate-y-1 !hover:shadow-2xl">
+        <div class="!text-center !mb-6">
+            <h3 class="!text-3xl !font-bold !text-gray-800">Welcome Back</h3>
+            <p class="!text-gray-500 !mt-2">Sign in to continue</p>
         </div>
+
+        <form id="zabeer-login-form" class="!space-y-5">
+            <input
+                type="text"
+                id="username"
+                class="!w-full !px-4 !py-3 !border !border-gray-300 !rounded-lg !text-gray-700 focus:!outline-none focus:!ring-2 focus:!ring-rose-500 focus:!border-rose-500"
+                placeholder="Username"
+                required>
+            <input
+                type="password"
+                id="password"
+                class="!w-full !px-4 !py-3 !border !border-gray-300 !rounded-lg !text-gray-700 focus:!outline-none focus:!ring-2 focus:!ring-rose-500 focus:!border-rose-500"
+                placeholder="Password"
+                required>
+            <button
+                type="submit"
+                class="!w-full !py-3 !rounded-lg !text-white !font-semibold !text-lg !bg-gradient-to-r !from-red-500 !to-rose-600 hover:!from-red-600 hover:!to-rose-700 !transition-all">
+                🔐 Login
+            </button>
+        </form>
+
+        <p class="!text-center !text-gray-500 !mt-6">
+            Forgot your password?
+            <a href="/wp-login.php?action=lostpassword" class="!text-rose-600 hover:!underline hover:!text-rose-700">Reset it</a>
+        </p>
+        <!-- Divider -->
+        <div class="flex items-center my-6">
+            <div class="flex-grow border-t border-gray-300"></div>
+            <span class="mx-3 text-gray-400 text-sm">or</span>
+            <div class="flex-grow border-t border-gray-300"></div>
+        </div>
+
+        <!-- Register Section -->
+        <p class="text-center text-gray-600 mt-4 text-sm">
+            <span>Don’t have an account?</span>
+            <a href="/registration"
+                class="ml-2 text-rose-500 font-semibold hover:text-rose-600 hover:underline transition">
+                Register as a vendor
+            </a>
+        </p>
     </div>
 
     <script>
         const API_URL = '<?php echo site_url(); ?>/wp-json/jwt-auth/v1/token';
+        const ME_URL = '<?php echo site_url(); ?>/wp-json/zabeer-auth/v1/me';
         const LOGIN_URL = '<?php echo site_url(); ?>/wp-login.php';
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -93,24 +72,39 @@
             form.addEventListener('submit', async function(e) {
                 e.preventDefault();
 
-                const username = document.getElementById('username').value;
-                const password = document.getElementById('password').value;
+                const username = document.getElementById('username').value.trim();
+                const password = document.getElementById('password').value.trim();
 
                 try {
-                    // Call JWT API
                     const response = await fetch(API_URL, {
                         method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ username, password })
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            username,
+                            password
+                        })
                     });
 
                     const data = await response.json();
-                    console.log(data);
+                    console.log("JWT Response:", data);
 
                     if (data.token) {
-                        sessionStorage.setItem('jwt_token', data.token);
+                        const token = data.token;
 
-                        // Trigger WordPress login
+                        const meResponse = await fetch(ME_URL, {
+                            headers: {
+                                "Authorization": `Bearer ${token}`
+                            }
+                        });
+
+                        const meData = await meResponse.json();
+                        console.log("Authenticated User Info:", meData);
+
+                        localStorage.setItem('jwt_token', token);
+                        localStorage.setItem('auth_user', JSON.stringify(meData));
+
                         const wpForm = document.createElement('form');
                         wpForm.method = 'POST';
                         wpForm.action = LOGIN_URL;
@@ -136,13 +130,22 @@
                         document.body.appendChild(wpForm);
                         wpForm.submit();
                     } else {
-                        alert('Login failed!');
+                        alert('❌ Login failed! Please check your username or password.');
                     }
                 } catch (error) {
                     console.error("Error:", error);
+                    alert("⚠️ An error occurred while logging in. Please try again later.");
                 }
             });
+            const pageContent = document.querySelector('.page-content');
+            if (pageContent) {
+                pageContent.classList.add('flex', 'items-center', 'justify-center');
+            }
+
         });
     </script>
+
+
 </body>
+
 </html>

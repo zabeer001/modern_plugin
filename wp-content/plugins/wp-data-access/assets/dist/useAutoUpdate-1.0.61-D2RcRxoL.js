@@ -1,0 +1,1 @@
+import{r as o}from"./redux-1.0.61-CrJ4jvTM.js";import{l as r}from"./lib-1.0.61-DoXQcMHD.js";const p=(s,a)=>{const[t,e]=o.useState(!1);return o.useEffect(()=>{r.debug(t),t&&a(),e(!1)},[s]),e};export{p as u};
